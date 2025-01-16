@@ -9,6 +9,7 @@ function mySlice(arr, start = 0, end = arr.length) {
 }
 
 function myIndexOf(arr, item, from = 0) {
+	if (from < 0) from = arr.length + from;
 	for (let i = from; i < arr.length; i++) {
 		if (arr[i] === item) return i;
 	}
@@ -16,6 +17,7 @@ function myIndexOf(arr, item, from = 0) {
 }
 
 function myIncludes(arr, item, from = 0) {
+	if (from < 0) from = arr.length + from;
 	for (let i = from; i < arr.length; i++) {
 		if (arr[i] === item) return true;
 	}
